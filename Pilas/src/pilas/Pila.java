@@ -46,4 +46,34 @@ public class Pila {
         System.out.println("el fondo de la pila es: " + pila[fondo]);
         return pila[fondo];
     }
+    public boolean esVacia(){
+        boolean vacia = false;
+        for (int i = 0; i < pila.length; i++) {
+            if (pila[i] ==  0){
+                vacia =true;
+            }else{
+                vacia = false;
+            }
+        }
+        return vacia;
+    }
+    public boolean esLlena(){
+        boolean llena = false;
+        if(pila[pila.length - 1] != 0) {
+            llena = true;
+        } else {
+        llena = false;        
+        }
+        return llena;
+    }
+    
+    public int tamaño(){
+        return cima;
+    }
+    public void limpiarPila(){
+        for (int i = 0; i < pila.length; i++) {
+            pila[i] = 0;
+        }
+    }
+    
 }

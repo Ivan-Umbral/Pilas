@@ -17,32 +17,48 @@ public class Pilas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int pila[] = new int[10];
-        Pila objPilaEnteros = new Pila(pila);
-
-        String res = JOptionPane.showInputDialog(null, "seleccione una opcion", "1.- insertar  \n" + "2.- Retitar \n"
+       int[] pila=new  int [10];
+       Pila objctopilaenteros = new Pila (pila);
+       int op=3;
+       //agregamos (operacion push )elementos  a la pila de datos 
+       //el fondo fr la pila seria 90 y la sima 12
+    objctopilaenteros.insertar(90);
+    objctopilaenteros.insertar(56);
+    objctopilaenteros.insertar(23);
+    objctopilaenteros.insertar(12);
+    
+    while (op!=6)
+    {
+        JOptionPane.showInputDialog("1.- insertar  \n"+"2.- Retitar \n"
                 + "3.- mostrar \n"
                 + "4.-Cima \n"
                 + "5.-fondo \n");
-        switch (res) {
+        switch (op){
             case 1:
-                objPilaEnteros.insertar(90);
-                objPilaEnteros.insertar(56);
-                objPilaEnteros.insertar(23);
-                objPilaEnteros.insertar(12);
+              objctopilaenteros.insertar(89);
+                objctopilaenteros.insertar(20);
                 break;
             case 2:
-                objPilaEnteros.retirar();
+                objctopilaenteros.retirar();
                 break;
             case 3:
-                objPilaEnteros.mostrarPila();
+                objctopilaenteros.mostrarPila();
                 break;
             case 4:
-                objPilaEnteros.cima();
+                   objctopilaenteros.cima();
                 break;
             case 5:
-                objPilaEnteros.fondo();
+                objctopilaenteros.fondo();
                 break;
+            
+                        
+        
+        
+    
+    
+    
+}
+
 
 //        //agragamos(operacion push) Elementos a la pila de datos.
 //        //el fondo de la pila seria 90 y la suma 12
